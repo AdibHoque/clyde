@@ -23,7 +23,7 @@ async def dmall(ctx,*, msg:str=None):
           await bot.send_message(user, msg)
           await asyncio.sleep(1)
           
-@bot.command()
+@bot.command(pass_context = True)
 async def help_1(ctx):
 	await bot.say('no u')
 	
