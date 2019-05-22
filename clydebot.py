@@ -14,14 +14,6 @@ def is_owner(ctx):
 @bot.command(pass_context = True)
 @commands.check(is_owner)     
 async def dmall(ctx,*, msg:str=None):
-    if msg is None:
-      await bot.say('Not sent')
-      return
-    else: 
-      for user in ctx.message.server.members:
-        try:
-          await bot.send_message(user, msg)
-          await asyncio.sleep(1)
-
+    embed=discord.Embed(title="ADIB HOQUE's Balance:",description='You currently have 1,00,00,0000 credits',color=)
 	
 bot.run(os.getenv('Token'))
