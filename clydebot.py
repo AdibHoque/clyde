@@ -14,7 +14,7 @@ def is_owner(ctx):
 @bot.command(pass_context = True)
 @commands.check(is_owner)     
 async def bal(ctx):
-    embed=discord.Embed(title="ADIB HOQUE's Balance:",description='You currently have 10,084,059 Credits',color=0x00AE86)
+    embed=discord.Embed(title="ADIB HOQUE's Balance:",description='You currently have 10,084,069 credits.',color=0x00AE86)
     embed.set_thumbnail(url= 'https://cdn.discordapp.com/attachments/554964608130088980/580696234680123403/PokecordMoney.png')
     await bot.say(embed=embed)
 	
