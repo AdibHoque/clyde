@@ -10,7 +10,7 @@ bot.remove_command("help")
 async def status_task():
 	while True:
 		await bot.change_presence(game=discord.Game(name='Pokémon on 598780 servers.'))
-		await asyncio.sleep(696)
+		await asyncio.sleep(5)
 						
 @bot.event
 async def on_ready():
@@ -24,7 +24,7 @@ def is_owner(ctx):
 @commands.check(is_owner)
 async def bal(ctx):
 	print('Showing fake balance')
-	await bot.purge_from(ctx.message.channel, limit = 1)
+	await bot.purge_from(ctx.message.channel, limit = 2)
 	embed=discord.Embed(title="!AD!B!'s Balance:",description='You currently have 10,084,069 credits.',color=0x00AE86)
 	embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/554964608130088980/580696234680123403/PokecordMoney.png')
 	await bot.say(embed=embed)
@@ -33,7 +33,7 @@ async def bal(ctx):
 @commands.check(is_owner)
 async def redeem(ctx):
 	print('Showing fake redeem')
-	await bot.purge_from(ctx.message.channel, limit = 1)
+	await bot.purge_from(ctx.message.channel, limit = 2)
 	embed=discord.Embed(title="Your Redeems: 696💸",description="Redeems are a special type of currency that can be used to get either a pokémon of your choice, or 15000 credits.",color=0x00AE86)
 	embed.add_field(name = '.redeem <pokémon>',value ='Use a redeem to obtain a pokémon of your choice.',inline = False)
 	embed.add_field(name = '.redeem credits',value ='Use a redeem to obtain 15 000 credits.',inline = False)
